@@ -1,5 +1,5 @@
-import React, { useContext, useState } from 'react';
-import { Platform } from 'react-native';
+import React, { useContext, useState, useEffect } from 'react';
+import { Platform, Keyboard, TouchableWithoutFeedback } from 'react-native';
 import { AuthContext } from '../../contexts/auth';
 
 import { Container,
@@ -27,7 +27,12 @@ export default function Logon() {
       signIn(email, password);
     }
 
+    useEffect(() => {
+      alert('Email: felipe@hotmail.com, Senha: 123123');
+    }, []);
+
     return (
+      <TouchableWithoutFeedback onPress={ () => Keyboard.dismiss() }>
         <Container>
             <Content
               behavior={Platform.OS === 'ios' ? 'padding' : ''}
@@ -53,19 +58,22 @@ export default function Logon() {
                   autoCapitalize="none"
                   value={password}
                   onChangeText={ text => setPassword(text) }
+                  secureTextEntry={true}
                 />
               </AreaInput>
-    
+
               <SubmitButton onPress={handleLogin}>
                 <SubmitText>Acessar</SubmitText>
               </SubmitButton>
-    
-              <Link onPress={ () => navigation.navigate('Register') }>
-                <LinkText>Criar uma conta!</LinkText>
-              </Link>
-              
+
+              { 0 == 1 ? (<Link onPress={ () => navigation.navigate('Register') }>
+                            <LinkText>Criar uma conta!</LinkText>
+                          </Link>)
+                       : <></>
+              }      
     
             </Content>
         </Container>
+      </TouchableWithoutFeedback>
       );
     }

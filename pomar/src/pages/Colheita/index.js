@@ -37,12 +37,10 @@ export default function Home() {
   const [ grupo, setGrupo ] = useState(arvores);
 
   function reloader() {
-    console.log(filter);
 
     if(filter == 'todos') {
       const agrupe = arvores.filter( item => item.dt_coleta == format(new Date(newDate), 'dd/MM/yyyy'));
 
-      console.log(agrupe);
       setGrupo(agrupe);
 
       return;
@@ -51,8 +49,6 @@ export default function Home() {
     setGrupo([]);
 
     const agrupe = arvores.filter( item => item.especie.toLowerCase() == filter && item.dt_coleta == format(new Date(newDate), 'dd/MM/yyyy') );
-
-    console.log(agrupe);
 
     setGrupo(agrupe);
   }

@@ -16,7 +16,6 @@ export const List = styled.FlatList`
 `;
 
 export const PagText = styled.Text`
-    margin-top: 5px;
     font-size: 30px;
     color: #FFF;
     font-weight: bold;
@@ -28,11 +27,9 @@ export const DateText = styled.Text`
     font-style: italic;
     text-align: left;
     width: 90%;
-    margin-top: 15px;
 `;
 
 export const Ferramentas = styled.View`
-    margin-top: 20px;
     width: 90%;
     margin-right: 20px;
     flex-direction: row;
@@ -66,8 +63,9 @@ export const FilterText = styled.Text`
     font-style: italic;
     text-align: left;
     width: 90%;
-    margin-top: 5px;
 `;
+
+
 
 
 

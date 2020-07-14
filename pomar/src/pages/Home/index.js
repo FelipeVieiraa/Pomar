@@ -80,7 +80,6 @@ export default function Home() {
     <Header />
 
     <EmpresaText>Pomar</EmpresaText>
-    <UserText>Usuário: Felipe</UserText>
 
     <Ferramentas>
       <SearchEspecie onPress={handleShowPicker}>

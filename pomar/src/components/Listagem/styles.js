@@ -15,9 +15,10 @@ export const Listar = styled.View`
 `;
 
 export const ArvoreImg = styled.Image`
-    width: 95%;
+    width: 100%;
+    max-height: 200;
     min-height: 200;
-    border-radius: 4px;
+    border-radius: 6px;
 `;
 
 

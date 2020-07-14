@@ -16,7 +16,6 @@ export const List = styled.FlatList`
 `;
 
 export const EmpresaText = styled.Text`
-    margin-top: 5px;
     font-size: 30px;
     color: #FFF;
     font-weight: bold;
@@ -31,7 +30,6 @@ export const UserText = styled.Text`
 `;
 
 export const Ferramentas = styled.View`
-    margin-top: 20px;
     width: 90%;
     margin-right: 20px;
 `;
